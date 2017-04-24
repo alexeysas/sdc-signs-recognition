@@ -60,6 +60,8 @@ As we can see data samples are not uniformly distributed across all classes. Som
 
 ![alt text][image5]
 
+4. The last step is a to normalize images. Intersting fact to mention there is that pixel / 255  normalization works significaly better than (pixel - 128) / 128 proposed as sample.  
+
 ### Model Architecture  
 
 My final model consisted of the following layers:
@@ -107,10 +109,6 @@ If an iterative approach was chosen:
 * Which parameters were tuned? How were they adjusted and why?
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
 
 ###Test a Model on New Images
