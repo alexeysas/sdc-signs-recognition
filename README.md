@@ -6,7 +6,7 @@
 [image1]: ./images/signs_samples.png "Signs sample"
 [image2]: ./images/signs_distribution.png "Signs distribution"
 [image3]: ./images/transform_samples.png "Transformed images"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
+[image4]: ./images/samples.png "Samples"
 [image5]: ./examples/placeholder.png "Traffic Sign 2"
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
