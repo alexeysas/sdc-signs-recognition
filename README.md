@@ -54,7 +54,13 @@ As we can see data samples are not uniformly distributed across all classes. Som
 
 ![alt text][image4]
 
+ Trying to deal with this issue and increase validation accuracy I used different techiques like converting images to different color    spaces, histogram equalization and ect. One which appeared to work best is CLAHE (Contrast Limited Adaptive Histogram Equalization)(http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html)  
+ 
+ Here is how processed images looks like:
 
+![alt text][image5]
+
+ 
 which can make    
 
 Here is an example of a traffic sign image before and after grayscaling.
