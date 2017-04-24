@@ -7,7 +7,7 @@
 [image2]: ./images/signs_distribution.png "Signs distribution"
 [image3]: ./images/transform_samples.png "Transformed images"
 [image4]: ./images/samples.png "Samples"
-[image4]: ./images/processed_signs.png "Processed signs"
+[image5]: ./images/processed_signs.png "Processed signs"
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
