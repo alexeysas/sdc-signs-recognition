@@ -4,7 +4,7 @@
 [//]: # (Image References)
 
 [image1]: ./images/signs_samples.png "Signs sample"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
+[image2]: ./images/signs_distribution.png "Signs distribution"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
 [image5]: ./examples/placeholder.png "Traffic Sign 2"
@@ -31,7 +31,9 @@ Here is an exploratory visualization of the data set.  We can explore samples of
 
 ![alt text][image1]
 
-It is a bar chart showing how the data ...
+As we can see that data samples are not uniformly distributed across classes. Some classes have a lot more data samples. Although distributions are close for training, validation and test sets (sligtly different for validation set) it can cause issues for the model generalization. So we will try to address this issue during preprocessing step.
+
+![alt text][image2]
 
 ###Design and Test a Model Architecture
 
