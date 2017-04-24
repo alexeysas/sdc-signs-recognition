@@ -50,6 +50,13 @@ As we can see data samples are not uniformly distributed across all classes. Som
 
 2. Also to extend ability for the generalization I decided to extend data set using same transformation above for whole dataset two more times. As the result total number of training sample increased to 259290
 
+3. Analyzing images futher I found that there is a huge variety of different contrast levels for the images:
+
+![alt text][image4]
+
+
+which can make    
+
 Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
