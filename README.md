@@ -31,7 +31,7 @@ Here is an exploratory visualization of the data set.  We can explore samples of
 
 ![alt text][image1]
 
-As we can see that data samples are not uniformly distributed across classes. Some classes have a lot more data samples. Although distributions are close for training, validation and test sets (sligtly different for validation set) it can cause issues for the model generalization. So we will try to address this issue during preprocessing step.
+As we can see data samples are not uniformly distributed across all classes. Some classes have a lot more data samples. Also distributions are close for training, validation and test sets (sligtly different for validation set). Becouse of this fact non-uniform distribution should not be a problem for the existing data. However, there is a risk that model will not be generalized well for additional data (for example samples from the web) as it can be overtrained for specific classes. We will try to address this issue during preprocessing step later.
 
 ![alt text][image2]
 
