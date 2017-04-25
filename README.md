@@ -43,7 +43,7 @@ As we can see data samples are not uniformly distributed across all classes. Som
 
 1. As a first step, I decided to deal with non-uniformly distributed data. The idea was to make balanced training set where all classes are represented with the same number of samples. I decided to make copies from the existing images with low number of samples. Additionally, to prevent exact same images appearing twice two additional transformations were selected to add some variety to the resulting set: 
 * Randomly scaling image up with factor 1.0 - 1.25 
-* Randomly rotating image wit angle from -15 to 15 degree.
+* Randomly rotating image using angle from -15 to 15 degree.
 
  These parameters above just worked best for me with some other choices.  
  As the result total number of training samples increased to 86430 
@@ -60,19 +60,19 @@ As we can see data samples are not uniformly distributed across all classes. Som
 
 Trying to deal with this issue and increase validation accuracy I used different techniques like converting images to different color spaces, histogram equalization and etc. One which appeared to work best is CLAHE (Contrast Limited Adaptive Histogram Equalization) (http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html)  
  
- Here is how processed images looks like:
+ Here is how processed images look like:
 
 ![alt text][image5]
 
-4. The last step is a to normalize images. Intersting fact to mention there is that pixel / 255  normalization works significaly better than (pixel - 128) / 128 proposed as sample.  
+4. The last step is a to normalize images. Interesting fact to mention there is that pixel / 255  normalization works significantly better than (pixel - 128) / 128 proposed as a sample.  
 
 ### Model Architecture  
 
-My final model consisted of the following layers:
+My final model consist of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 Grayscaled image   							| 
+| Input         		| 32x32x1 Grayscale image   							| 
 | Convolution 4x4     	| 1x1 stride, same padding, outputs 32x32x32 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 16x16x32 |
@@ -83,19 +83,19 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 4x4x128 |
 | Fully connected		| 2048x512        									|
-| Dropout | keep_prob = 0.5        									|
+| Dropout | keep_prob = 0.4        									|
 | Fully connected		| 512x128        									|
-| Dropout | keep_prob = 0.5        									|
+| Dropout | keep_prob = 0.4        									|
 | Fully connected		| 128x43        									|
 | Softmax				|       									|
 
-1. After pre-processing steps are done I tried initial LeNet model as base - and results were sligtly above 90% accuracy for validation set. It appeared that adding  dropout layer for the first fully connected layer with keep_probability = 0.5 could do the trick. Just with this small change I was able to archive 94% accuracy for the validation set with base LeNet model. 
+1. After pre-processing steps are done I tried initial LeNet model as a base - and results were slightly above 90% accuracy for the validation set. It appeared that adding  dropout layer for the first fully connected layer with keep_probability = 0.5 is a good starting point to improve model. Just with this small change I was able to archive 94% accuracy for the validation set with base LeNet model.
 
 2. To archive higher accuracy results, I tried following options:
  * Adding new features maps to convolutional layers
- * Playng with padding types and filter sizes, tried following filter sizes: 4, 5, 6. Results are pretty close there. selected 4x4 filters for the model
- * Playing with fully connected layers sizes.
- * Finaly decided to add one more fully connected layer - it slightly increased perfoemance for the model.
+ * Playing with padding types and filter sizes, tried following filter sizes: 4, 5, 6. Results are pretty close there. Selected 4x4 filters for the model
+ * Playing with fully connected layers sizes. The selected size can be ssen in table above.
+ * Finally decided to add one more fully connected layer - it slightly increased performance for the model.
 
 3. For the training part of the model I decided to select AdamOptimizer as it uses momentum and adaptive learning rates and should work better when SDC.
   * While playing with batch sizes I relized that 128 batch size works slightly better than lager sizes as 256, 512, 1024. 
