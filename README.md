@@ -122,29 +122,29 @@ Here is predictions results:
 
 ![alt text][image12]
 
-The model was able to correctly guess 5 of the 6 traffic signs, which gives an accuracy of 83.3%. This is lower compares to the accuracy on the test set of 96.6%.  There can be a couple of reasons: web set is too small,  signs are different size and quality than provided test set.
+The model was able to correctly guess 6 of the 6 traffic signs, which gives an accuracy of 100%. This is higher compares to the accuracy on the test set of 96.7%.  Probably one of the reasons is that all signs provided are in pretty good quality. Also it is worth to mention the results are slightly different when training model with same parameters again. Some times after model is re-trained "bumpy road" sign is not predicted correctly.
 
-Also the surprising fact is that prediction is wrong for the  "bumpy road" sign which is a best quality sign :)   
+It is surprising as "bumpy road" sign is a best quality sign :)   
 
 Checking precision and recall on the test set we see that "Bumpy road" is a difficult sign for the model: 
 
-* Bumpy road - Recall: 85.8333, Percision: 96.2617
+* Bumpy road - Recall: 89.1667, Percision: 96.3964
 
 So probably it is relevant result. Also interestingly "double curve" and "pedestrians" are most difficult signs for the model:  
 
-* Double curve - Recall: 67.7778, Percision: 87.1429
+* Double curve - Recall: 73.3333, Percision: 91.6667
 
-* Pedestrians - Recall: 68.3333, Percision: 80.3922
+* Pedestrians - Recall: 70.0000, Percision: 76.3636
 
 Although - model predicted "double curve" correctly for the web image :)
 
-From the other hand the "End of all speed and passing limits" has excellent statistics:
+From the other hand the "Turn right ahead" has excellent statistics:
 
-* End of all speed and passing limits - Recall: 100.0000, Percision: 100.0000
+* Turn right ahead - Recall: 100.0000, Percision: 100.0000
 
 Let's look into the softmax probabilities for the web image predictions:
 
-Model has almost 100% confidence about "Speed limit (30km/h)", "Yield" and "Double curve" signs. "Children crossing" is also more than 99% confidence. It is not so sure about "Beware of ice/snow" sign - 78%. Interestingly, model is s 
+Model has almost 100% confidence about "Speed limit (30km/h)", "Yield" and "Double curve" signs. "Beware of ice/snow" sign" is also more than 96% confidence. It is not so sure about "Bumpy road" - 82% and just quesiing that "Children crossing" is valid with 31% probability. 
 
 ![alt text][image13]
 
