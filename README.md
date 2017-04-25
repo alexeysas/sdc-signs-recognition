@@ -128,9 +128,9 @@ Also the surprising fact is that predicion is wrong for the  "bumpy road" sign w
 
 Checking percision and recall on the test set we see that "Bumpy road" is a difficult sign for the model:
 
-Bumpy road
-Recall: 85.8333
-Percision: 96.2617
+* Bumpy road
+  Recall: 85.8333
+  Percision: 96.2617
 
 So probably it is relevant result. Also interestingly "double curve" and "pedestrians" are most difficult signs for the model:  
 
