@@ -128,29 +128,23 @@ Also the surprising fact is that predicion is wrong for the  "bumpy road" sign w
 
 Checking percision and recall on the test set we see that "Bumpy road" is a difficult sign for the model:
 
-* Bumpy road
-  Recall: 85.8333
-  Percision: 96.2617
+* Bumpy road - Recall: 85.8333, Percision: 96.2617
 
 So probably it is relevant result. Also interestingly "double curve" and "pedestrians" are most difficult signs for the model:  
 
-Double curve
-Recall: 67.7778
-Percision: 87.1429
+* Double curve - Recall: 67.7778, Percision: 87.1429
 
-Pedestrians
-Recall: 68.3333
-Percision: 80.3922
+* Pedestrians - Recall: 68.3333, Percision: 80.3922
 
 Although - model predicted "double curve" correctly for the web image :)
 
 From the other hand the "End of all speed and passing limits" has excelent statistics:
 
-End of all speed and passing limits
-Recall: 100.0000
-Percision: 100.0000
+* End of all speed and passing limits - Recall: 100.0000, Percision: 100.0000
 
 Let's look into the softmax probabilities for the web image predictions:
+
+Model has almost 100% confidence about "Speed limit (30km/h)", "Yield" and "Double curve" signs. "Children creossing" is also more than 99% confidence. It is not so sure about "Beware of ice/snow" sign - 78%. Interestingly, model is s 
 
 ![alt text][image13]
 
