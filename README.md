@@ -130,19 +130,19 @@ It is surprising as "bumpy road" sign is a best quality sign :)
 
 Checking precision and recall on the test set we see that "Bumpy road" is a relatively difficult sign for the model: 
 
-* Bumpy road - Recall: 89.1667, Percision: 96.3964
+* Bumpy road - Recall: 89.16%, Percision: 96.39%
 
 So probably it is relevant result. Also interestingly that "double curve" and "pedestrians" are most difficult signs for the model:  
 
-* Double curve - Recall: 73.3333, Percision: 91.6667
+* Double curve - Recall: 73.33%, Percision: 91.66%
 
-* Pedestrians - Recall: 70.0000, Percision: 76.3636
+* Pedestrians - Recall: 70.00%, Percision: 76.36%
 
 However, model predicted "double curve" correctly for the web image :)
 
 From the other hand the "Turn right ahead" has excellent statistics:
 
-* Turn right ahead - Recall: 100.0000, Percision: 100.0000
+* Turn right ahead - Recall: 100.00%, Percision: 100.00%
 
 Let's look into the softmax probabilities for the web image predictions:
 
