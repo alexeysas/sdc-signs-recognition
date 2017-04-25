@@ -85,8 +85,15 @@ My final model consisted of the following layers:
 
 1. After pre-processing steps are done. I was able to archive 94% accuracy for the validation set with base LeNet model with one small change - adding dropout layer for the first fully connected layer with keep_probability = 0.5.
 
-2. To archive higher accuracy results, I've   
+2. To archive higher accuracy results, I tried following options:
+ * Adding new features maps to convolutional layers
+ * Playng with padding types and filter sizes, tried following filter sizes: 4, 5, 6 (3)
+ * Playing with fully connected layers sizes.
+ * Finaly decided to add one more fully connected layer - it slightly increased perfoemance for the model.
 
+3. For the training part of the model I decided to select AdamOptimizer as it uses momentum and adaptive learning rates and should work better when SDC.
+  * While playing with batch sizes I relized that 128 batch size works slightly better than lager sizes as 256, 512, 1024. 
+  * Trying different learning rate values (0.01, 0.001, 0.0005, 0.0001). I realized that 0.0005 works best for my model.
 
 
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
