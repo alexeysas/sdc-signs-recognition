@@ -98,9 +98,9 @@ My final model consist of the following layers:
  * Finally decided to add one more fully connected layer - it slightly increased performance for the model.
 
 3. For the training part of the model I decided to select AdamOptimizer as it uses momentum and adaptive learning rates and should work better when SDC.
-  * While playing with batch sizes I relized that 128 batch size works slightly better than lager sizes as 256, 512, 1024. 
-  * Trying different learning rate values (0.01, 0.001, 0.0005, 0.0001). I realized that 0.0005 works best for my model.
-  * Also it looks like 50 - 100 epochs is enough for model to stop increasing validation accuracy reaching traing accuracy ~99.9%
+  * While playing with batch sizes I realized that 128 batch size works slightly better than lager sizes as 256, 512, 1024. 
+  * Trying different learning rate values (0.01, 0.001, 0.0005, 0.0001) I realized that 0.0005 works best for the model.
+  * Also it looks like 50 - 100 epochs is enough for model to stop increasing validation accuracy reaching taring accuracy ~99.9% - indicating slight oferfitting.
  
 After model is selected and tuned my final model results were:
 * training set accuracy of 99.9%
@@ -109,24 +109,24 @@ After model is selected and tuned my final model results were:
 
 ### Test a Model on New Images
 
-Here are five German traffic signs that I found on the web:
+There are six German traffic signs that I found on the web:
 
 ![alt text][image6] ![alt text][image7] ![alt text][image8] 
 ![alt text][image9] ![alt text][image10] ![alt text][image11]
 
-I expected that two images might be difficult to classify:
- * Children crossing - becouse of shadow and noisy background.
- * Beware Ice/Snow - becose of snow noise
+I expected that two images might be difficult to classify: 
+* Children crossing - because of a shadow and noisy background. 
+* Beware Ice/Snow - because of the snow noise
 
 Here is predictions results:
 
 ![alt text][image12]
 
-The model was able to correctly guess 5 of the 6 traffic signs, which gives an accuracy of 83.3%. This is lower compares to the accuracy on the test set of 96.6%.  There can be a couple of reasons: web set is too small,  signs are different size and quality then providede test set.  
+The model was able to correctly guess 5 of the 6 traffic signs, which gives an accuracy of 83.3%. This is lower compares to the accuracy on the test set of 96.6%.  There can be a couple of reasons: web set is too small,  signs are different size and quality than provided test set.
 
-Also the surprising fact is that predicion is wrong for the  "bumpy road" sign which is a best quality sign :) 
+Also the surprising fact is that prediction is wrong for the  "bumpy road" sign which is a best quality sign :)   
 
-Checking percision and recall on the test set we see that "Bumpy road" is a difficult sign for the model:
+Checking precision and recall on the test set we see that "Bumpy road" is a difficult sign for the model: 
 
 * Bumpy road - Recall: 85.8333, Percision: 96.2617
 
@@ -138,13 +138,13 @@ So probably it is relevant result. Also interestingly "double curve" and "pedest
 
 Although - model predicted "double curve" correctly for the web image :)
 
-From the other hand the "End of all speed and passing limits" has excelent statistics:
+From the other hand the "End of all speed and passing limits" has excellent statistics:
 
 * End of all speed and passing limits - Recall: 100.0000, Percision: 100.0000
 
 Let's look into the softmax probabilities for the web image predictions:
 
-Model has almost 100% confidence about "Speed limit (30km/h)", "Yield" and "Double curve" signs. "Children creossing" is also more than 99% confidence. It is not so sure about "Beware of ice/snow" sign - 78%. Interestingly, model is s 
+Model has almost 100% confidence about "Speed limit (30km/h)", "Yield" and "Double curve" signs. "Children crossing" is also more than 99% confidence. It is not so sure about "Beware of ice/snow" sign - 78%. Interestingly, model is s 
 
 ![alt text][image13]
 
