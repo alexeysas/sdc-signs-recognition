@@ -126,32 +126,34 @@ The model was able to correctly guess 5 of the 6 traffic signs, which gives an a
 
 Also the surprising fact is that predicion is wrong for the  "bumpy road" sign which is a best quality sign :) 
 
+Checking percision and recall on the test set we see that "Bumpy road" is a difficult sign for the model:
 
+Bumpy road
+Recall: 85.8333
+Percision: 96.2617
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+So probably it is relevant result. Also interestingly "double curve" and "pedestrians" are most difficult signs for the model:  
 
-Here are the results of the prediction:
+Double curve
+Recall: 67.7778
+Percision: 87.1429
 
+Pedestrians
+Recall: 68.3333
+Percision: 80.3922
 
+Although - model predicted "double curve" correctly for the web image :)
 
-T
+From the other hand the "End of all speed and passing limits" has excelent statistics:
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+End of all speed and passing limits
+Recall: 100.0000
+Percision: 100.0000
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+Let's look into the softmax probabilities for the web image predictions:
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+![alt text][image13]
 
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
