@@ -148,7 +148,7 @@ Let's look into the softmax probabilities for the web image predictions:
 
 ![alt text][image13]
 
-Model has almost 100% confidence about "Speed limit (30km/h)", "Yield" and "Double curve" signs. "Beware of ice/snow" sign" is also more than 96% confidence. It is not so sure about "Bumpy road" - 82% and just quesiing that "Children crossing" is valid with 31% probability. 
+Model has almost 100% confidence about "Speed limit (30km/h)", "Yield" and "Double curve" signs. "Beware of ice/snow" sign" is also more than 96% confidence. It is not so sure about "Bumpy road" - 82% and just randomly guessing that "Children crossing" is valid with 31% probability. 
 
 ###  Visualizing the Neural Network
 Let's compare feature maps for the sign image and for the cat image for the first convolutional level: 
