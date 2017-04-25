@@ -8,9 +8,12 @@
 [image3]: ./images/transform_samples.png "Transformed images"
 [image4]: ./images/samples.png "Samples"
 [image5]: ./images/processed_signs.png "Processed signs"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image6]: ./web_samples/sample1.png "Traffic Sign 1"
+[image7]: ./web_samples/sample2.png "Traffic Sign 2"
+[image8]: ./web_samples/sample3.png "Traffic Sign 3"
+[image9]: ./web_samples/sample4.png "Traffic Sign 4"
+[image10]: ./web_samples/sample5.png "Traffic Sign 5"
+[image11]: ./web_samples/sample6.png "Traffic Sign 6"
 
 ### Data Set Summary & Exploration
 
@@ -83,7 +86,7 @@ My final model consisted of the following layers:
 | Fully connected		| 128x43        									|
 | Softmax				|       									|
 
-1. After pre-processing steps are done. I was able to archive 94% accuracy for the validation set with base LeNet model with one small change - adding dropout layer for the first fully connected layer with keep_probability = 0.5.
+1. After pre-processing steps are done I tried initial LeNet model as base - and results were sligtly above 90% accuracy for validation set. It appeared that adding  dropout layer for the first fully connected layer with keep_probability = 0.5 could do the trick. Just with this small change I was able to archive 94% accuracy for the validation set with base LeNet model. 
 
 2. To archive higher accuracy results, I tried following options:
  * Adding new features maps to convolutional layers
@@ -94,36 +97,19 @@ My final model consisted of the following layers:
 3. For the training part of the model I decided to select AdamOptimizer as it uses momentum and adaptive learning rates and should work better when SDC.
   * While playing with batch sizes I relized that 128 batch size works slightly better than lager sizes as 256, 512, 1024. 
   * Trying different learning rate values (0.01, 0.001, 0.0005, 0.0001). I realized that 0.0005 works best for my model.
-
-
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-
-To train the model, I used an ....
-
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
-
-My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
-
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
+  * Also it looks like 50 - 100 epochs is enough for model to stop increasing validation accuracy reaching traing accuracy ~99.9%
  
+After model is selected and tuned my final model results were:
+* training set accuracy of 99.9%
+* validation set accuracy of 98.1%
+* test set accuracy of 96.0%
 
-###Test a Model on New Images
-
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+### Test a Model on New Images
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image6] ![alt text][image7] ![alt text][image8] 
+![alt text][image9] ![alt text][image10] ![alt text][image11]
 
 The first image might be difficult to classify because ...
 
