@@ -5,7 +5,7 @@
 
 [image1]: ./images/signs_samples.png "Signs sample"
 [image2]: ./images/signs_distribution.png "Signs distribution"
-[image3]: ./examples/random_noise.jpg "Random Noise"
+[image3]: ./images/transform_samples.png "Transformed images"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
 [image5]: ./examples/placeholder.png "Traffic Sign 2"
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
@@ -44,7 +44,9 @@ As we can see data samples are not uniformly distributed across all classes. Som
  These parameters above just worked best for me with some other choices. 
  As the result total number of trainig samples increased to 86430
  
- Here is a sample of variations:
+ Here is a sample of fake images generated using transforms provided:
+ 
+![alt text][image3]
 
 2. Also to extend ability for the generalization I decided to extend data set using same transformation above for whole dataset two more times. As the result total number of training sample increased to 259290
 
