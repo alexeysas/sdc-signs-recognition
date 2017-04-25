@@ -14,6 +14,9 @@
 [image9]: ./web_samples/sample4.png "Traffic Sign 4"
 [image10]: ./web_samples/sample5.png "Traffic Sign 5"
 [image11]: ./web_samples/sample6.png "Traffic Sign 6"
+[image12]: ./images/predictions.png "Predictions"
+[image13]: ./images/softmax_predictions.png "Softmax predictions"
+
 
 ### Data Set Summary & Exploration
 
@@ -70,13 +73,13 @@ My final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 Grayscaled image   							| 
-| Convolution 5x5     	| 1x1 stride, same padding, outputs 32x32x32 	|
+| Convolution 4x4     	| 1x1 stride, same padding, outputs 32x32x32 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 16x16x32 |
-| Convolution 5x5     	| 1x1 stride, same padding, outputs 16x16x64 	|
+| Convolution 4x4     	| 1x1 stride, same padding, outputs 16x16x64 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 8x8x64 |
-| Convolution 5x5     	| 1x1 stride, same padding, outputs 8x8x128 	|
+| Convolution 4x4     	| 1x1 stride, same padding, outputs 8x8x128 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 4x4x128 |
 | Fully connected		| 2048x512        									|
@@ -90,7 +93,7 @@ My final model consisted of the following layers:
 
 2. To archive higher accuracy results, I tried following options:
  * Adding new features maps to convolutional layers
- * Playng with padding types and filter sizes, tried following filter sizes: 4, 5, 6 (3)
+ * Playng with padding types and filter sizes, tried following filter sizes: 4, 5, 6. Results are pretty close there. selected 4x4 filters for the model
  * Playing with fully connected layers sizes.
  * Finaly decided to add one more fully connected layer - it slightly increased perfoemance for the model.
 
@@ -115,17 +118,17 @@ I expected that two images might be difficult to classify:
  * Children crossing - becouse of shadow and noisy background.
  * Beware Ice/Snow - becose of snow noise
 
+Here is predictions results:
+
+[alt text][image12]
+
+Results are a bit surprising. The predicion is wrong for "bumpy road" sign which is a best quality sign :) 
+
+
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
