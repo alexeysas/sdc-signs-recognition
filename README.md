@@ -16,6 +16,8 @@
 [image11]: ./web_samples/sample6.png "Traffic Sign 6"
 [image12]: ./images/predictions.png "Predictions"
 [image13]: ./images/softmax_predictions.png "Softmax predictions"
+[image14]: ./images/feature_map_sign.png "Sign feature maps"
+[image15]: ./images/feature_map_cat.png "Cat feature map"
 
 
 ### Data Set Summary & Exploration
@@ -148,6 +150,11 @@ Let's look into the softmax probabilities for the web image predictions:
 
 Model has almost 100% confidence about "Speed limit (30km/h)", "Yield" and "Double curve" signs. "Beware of ice/snow" sign" is also more than 96% confidence. It is not so sure about "Bumpy road" - 82% and just quesiing that "Children crossing" is valid with 31% probability. 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+###  Visualizing the Neural Network
+Let's compare feature maps for the sign image and for the cat image for the first convolutional level: 
 
+![alt text][image14]
+
+![alt text][image15]
+
+We can see that feature map for sign clearly contains sign borders and inner symbol.  For the cat image it is a bit more messy. However. in spite of this network still pretty confident that cat is "Keep left" sign :)
