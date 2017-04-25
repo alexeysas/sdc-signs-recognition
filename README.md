@@ -157,4 +157,4 @@ Let's compare feature maps for the sign image and for the cat image for the firs
 
 ![alt text][image15]
 
-We can see that feature map for sign clearly contains sign borders and inner symbol.  For the cat image it is a bit more messy. However. in spite of this network still pretty confident that cat is "Keep left" sign :)
+We can see that feature map for sign clearly contains sign borders and inner symbol.  For the cat image it is a bit more messy. However, in spite of this, network still pretty confident that cat is a "Keep left" sign :)
