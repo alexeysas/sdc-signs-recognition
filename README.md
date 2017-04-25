@@ -35,8 +35,6 @@ As we can see data samples are not uniformly distributed across all classes. Som
 
 ### Pre-process image data 
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
-
 1. As a first step, I decided to deal with non-unifromly distributed data. The idea was to make balanced training set where all classes are represented with the same number of samples. I decided to make copies from the existing images with low number of samples. Additionaly, to prevent exact same images appearing twice two addtional transformations were selected to add some variation to the resulting set:
 * Randomly scaling image up with factor 1.0 - 1.3
 * Randomly rotating image wit angle from -15 to 15 degree.
@@ -48,7 +46,7 @@ As we can see data samples are not uniformly distributed across all classes. Som
  
 ![alt text][image3]
 
-2. Also to extend ability for the generalization I decided to extend data set using same transformation above for whole dataset two more times. As the result total number of training sample increased to 259290
+2. Also to extend ability for the generalization I decided to extend data set using same transformation above for whole dataset two more times. As the result total number of training sample increased to 259290 (6030 images per class)
 
 3. Analyzing images futher I found that there is a huge variety of different contrast levels for the images:
 
