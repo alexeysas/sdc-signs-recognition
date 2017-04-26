@@ -16,6 +16,8 @@
 [image11]: ./web_samples/sample6.png "Traffic Sign 6"
 [image12]: ./images/predictions.png "Predictions"
 [image13]: ./images/softmax_predictions.png "Softmax predictions"
+[image14]: ./images/feature_map_sign.png "Sign feature maps"
+[image15]: ./images/feature_map_cat.png "Cat feature map"
 
 
 ### Data Set Summary & Exploration
@@ -104,8 +106,8 @@ My final model consist of the following layers:
  
 After model is selected and tuned my final model results were:
 * training set accuracy of 99.9%
-* validation set accuracy of 98.1%
-* test set accuracy of 96.4%
+* validation set accuracy of 97.8%
+* test set accuracy of 96.7%
 
 ### Test a Model on New Images
 
@@ -122,21 +124,21 @@ Here is predictions results:
 
 ![alt text][image12]
 
-The model was able to correctly guess 6 of the 6 traffic signs, which gives an accuracy of 100%. This is higher compares to the accuracy on the test set of 96.7%.  Probably one of the reasons is that all signs provided are in pretty good quality. Also it is worth to mention the results are slightly different when training model with same parameters again. Some times after model is re-trained "bumpy road" sign is not predicted correctly.
+The model was able to correctly guess 6 of the 6 traffic signs, which gives an accuracy of 100%. This is higher compared to the accuracy on the test set of 96.7%.  Probably one of the reasons is that all signs provided are in pretty good quality. Also it is worth to mention that results are slightly different when training model with same parameters again. Some times after model is re-trained "bumpy road" sign is not predicted correctly.
 
 It is surprising as "bumpy road" sign is a best quality sign :)   
 
-Checking precision and recall on the test set we see that "Bumpy road" is a difficult sign for the model: 
+Checking precision and recall on the test set we see that "Bumpy road" is a relatively difficult sign for the model: 
 
 * Bumpy road - Recall: 89.1667, Percision: 96.3964
 
-So probably it is relevant result. Also interestingly "double curve" and "pedestrians" are most difficult signs for the model:  
+So probably it is relevant result. Also interestingly that "double curve" and "pedestrians" are most difficult signs for the model:  
 
 * Double curve - Recall: 73.3333, Percision: 91.6667
 
 * Pedestrians - Recall: 70.0000, Percision: 76.3636
 
-Although - model predicted "double curve" correctly for the web image :)
+However, model predicted "double curve" correctly for the web image :)
 
 From the other hand the "Turn right ahead" has excellent statistics:
 
@@ -144,11 +146,15 @@ From the other hand the "Turn right ahead" has excellent statistics:
 
 Let's look into the softmax probabilities for the web image predictions:
 
-Model has almost 100% confidence about "Speed limit (30km/h)", "Yield" and "Double curve" signs. "Beware of ice/snow" sign" is also more than 96% confidence. It is not so sure about "Bumpy road" - 82% and just quesiing that "Children crossing" is valid with 31% probability. 
-
 ![alt text][image13]
 
+Model has almost 100% confidence about "Speed limit (30km/h)", "Yield" and "Double curve" signs. "Beware of ice/snow" sign" is also more than 96% confidence. It is not so sure about "Bumpy road" - 82% and just quesiing that "Children crossing" is valid with 31% probability. 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+###  Visualizing the Neural Network
+Let's compare feature maps for the sign image and for the cat image for the first convolutional level: 
 
+![alt text][image14]
+
+![alt text][image15]
+
+We can see that feature map for sign clearly contains sign borders and inner symbol.  For the cat image it is a bit more messy. However. in spite of this network still pretty confident that cat is "Keep left" sign :)
